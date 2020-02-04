@@ -1,24 +1,101 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
-  <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, user-scalable=no" />
-      <title>{{gallery.title}} - {{album.title}}</title>
-      <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lightgallery.css'}}" />
-      <link rel="stylesheet" href="{{relative 'public/videojs/video-js.min.css'}}" />
-      <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lg-exif.min.css'}}" />
-      <link rel="stylesheet" href="{{relative 'public/core.css'}}" />
-      <link rel="stylesheet" href="{{relative 'public/theme.css'}}" />
-  </head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Building faithful youth.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{gallery.title}} {{album.title}}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@faithworkcamps" />
+    <meta name="twitter:title" content="Faith Workcamps: Files" />
+    <meta name="twitter:url" content="https://www.faithworkcamps.com/files/" />
+    <meta name="twitter:description" content="Building faithful youth." />
+    <meta name="twitter:image" content="https://www.faithworkcamps.com/assets/img/fw-logo.png" />
+    <meta property="og:title" content="Faith Workcamps: Files" />
+    <meta property="og:url" content="https://www.faithworkcamps.com/files/" />
+    <meta property="og:site_name" content="Faith Workcamps" />
+    <meta property="article:author" content="https://www.facebook.com/groups/32770546126/" />
+    <meta property="og:description" content="Building faithful youth." />
+    <meta property="og:image" content="https://www.faithworkcamps.com/assets/img/fw-logo.png" />
+    <link rel="canonical" href="https://www.faithworkcamps.com/files/">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{relative 'public/img/icons/favicon/apple-icon-57x57.png'}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{relative 'public/img/icons/favicon/apple-icon-60x60.png'}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{relative 'public/img/icons/favicon/apple-icon-72x72.png'}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{relative 'public/img/icons/favicon/apple-icon-76x76.png'}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{relative 'public/img/icons/favicon/apple-icon-114x114.png'}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{relative 'public/img/icons/favicon/apple-icon-120x120.png'}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{relative 'public/img/icons/favicon/apple-icon-144x144.png'}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{relative 'public/img/icons/favicon/apple-icon-152x152.png'}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{relative 'public/img/icons/favicon/apple-icon-180x180.png'}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{relative 'public/img/icons/favicon/android-icon-192x192.png'}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{relative 'public/img/icons/favicon/favicon-32x32.png'}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{relative 'public/img/icons/favicon/favicon-96x96.png'}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{relative 'public/img/icons/favicon/favicon-16x16.png'}}">
+    <link rel="manifest" href="{{relative 'public/img/icons/favicon/manifest.json'}}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{relative 'public/img/icons/favicon/ms-icon-144x144.png'}}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lightgallery.css'}}" />
+    <link rel="stylesheet" href="{{relative 'public/videojs/video-js.min.css'}}" />
+    <link rel="stylesheet" href="{{relative 'public/lightgallery/css/lg-exif.min.css'}}" />
+    <link rel="stylesheet" href="{{relative 'public/core.css'}}" />
+    <link rel="stylesheet" href="{{relative 'public/theme.css'}}" />
+    <link rel="stylesheet" href="{{relative 'public/main.css'}}" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400|Montserrat:400,700">
+</head>
 
-  <body>
-
-    {{> content}}
-    {{> video-loader}}
-
+<body>
+    <nav class="clearfix border-bottom border-light-gray">
+        <div class="left">
+            <a href="https://www.faithworkcamps.com" class="button py2 button-transparent nav-button caps">Faith Workcamps</a>
+        </div>
+        <ul class="right list-reset m0 nav-collapse">
+            <li class="inline-block m0">
+                <a href="https://www.faithworkcamps.com/writing" class="button button-transparent py2 h6 nav-button caps">weblog</a>
+            </li>
+            <li class="inline-block m0">
+                <a href="https://photos.faithworkcamps.com" class="button button-transparent py2 h6 nav-button caps link-color">photos</a>
+            </li>
+            <li class="inline-block m0">
+                <a href="https://www.faithworkcamps.com/devotions" class="button button-transparent py2 h6 nav-button caps">devotions</a>
+            </li>
+            <li class="inline-block m0">
+                <a href="https://www.faithworkcamps.com/files" class="button button-transparent py2 h6 nav-button caps">files</a>
+            </li>
+        </ul>
+    </nav>
+    {{> content}} {{> video-loader}}
+    <footer class="sticky-footer border-top border-light-gray gray h6">
+        <div class="sm-col px2">
+            &copy; 2020 Faith Workcamps.
+        </div>
+        <div class="sm-col-right px2">
+            <a href="https://twitter.com/faithworkcamps" target="_blank" class="gray hint--top" data-hint="Twitter">
+                <i class="fa fa-fw fa-lg fa-twitter-square"></i>
+            </a>
+            <a href="https://www.facebook.com/groups/32770546126/" target="_blank" class="gray hint--top" data-hint="Facebook">
+                <i class="fa fa-fw fa-lg fa-facebook-square"></i>
+            </a>
+            <a href="https://faithchurchemmaus.org" target="_blank" class="gray hint--top" data-hint="Faith">
+                <i class="fa fa-fw fa-lg fa-plus-square"></i>
+            </a>
+            <a href="https://github.com/faithworkcamps/" target="_blank" class="gray hint--top" data-hint="GitHub">
+                <i class="fa fa-fw fa-lg fa-github-square"></i>
+            </a>
+        </div>
+    </footer>
     <!-- jQuery -->
     <script src="{{relative 'public/jquery.min.js'}}"></script>
+    <!-- faithworkcamps.com assets -->
+    <script src="{{relative 'public/responsive-nav-min.js'}}"></script>
+    <script src="{{relative 'public/main.js'}}"></script>
     <!-- VideoJS -->
     <script src="{{relative 'public/videojs/video.min.js'}}"></script>
     <!-- LightGallery -->
@@ -28,22 +105,19 @@
     <script src="{{relative 'public/lightgallery/js/lg-thumbnail.js'}}"></script>
     <script src="{{relative 'public/lightgallery/js/lg-video.js'}}"></script>
     <script src="{{relative 'public/lightgallery/js/lg-exif.min.js'}}"></script>
-
     <script>
-      $(document).ready(function() {
-        $("#media").lightGallery({
-          thumbWidth: 80,
-          controls: true,
-          loop : false,
-          download: true,
-          counter: true,
-          videojs: true
+        $(document).ready(function() {
+            $("#media").lightGallery({
+                thumbWidth: 80,
+                controls: true,
+                loop: false,
+                download: true,
+                counter: true,
+                videojs: true
+            });
         });
-      });
     </script>
-
     {{> analytics}}
-
-  </body>
+</body>
 
 </html>

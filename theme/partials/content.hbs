@@ -1,54 +1,35 @@
-
-<div id="container">
-
-  <!--
-    Gallery title
-  -->
-  <header>
-    <h1><a href="{{relative gallery.home.url}}">{{gallery.title}}</a></h1>
-  </header>
-
-  <!--
-    Breadcrumbs of parent albums
-  -->
-  <nav class="breadcrumbs">
-    {{#each breadcrumbs~}}
-      <a class="breadcrumb-item" href="{{relative url}}">{{title}}</a>&nbsp;/&nbsp;
-    {{~/each~}}
-    <a class="breadcrumb-item" href="{{relative album.url}}">{{album.title}}</a>
-  </nav>
-
-  <!--
+<header class="bg-splash-gray px3 py3 border-bottom border-light-gray">
+    <div class="container">
+        <div class="clearfix">
+            <a href="https://www.faithworkcamps.com/files/">
+                <h1 class="page-title mt0 mb1">
+						{{#each breadcrumbs~}}
+ 						{{~/each~}}
+						<a class="breadcrumb-item" href="{{relative album.url}}">{{album.title}}</a>
+					</h1>
+            </a>
+        </div>
+        <h4 class="page-description body-font gray mt1 regular">Photography is the story I fail to put into words. - Destin Sparks</h4>
+    </div>
+</header>
+<!--
     Nested albums, if any
   -->
-  <div id="albums">
+<main class="container block p3">
     {{#each album.albums~}}
-      <a href="{{relative url}}" style="background-image: url('{{relative previews.0.urls.large}}')">
-        <div class="info">
-          <h3>{{title}}</h3>
-          <div class="summary">{{summary}}</div>
-          <div class="date">{{{date stats.fromDate}}} - {{{date stats.toDate}}}</div>
-        </div>
-      </a>
+    <div class="col sm-col-6 px2 mt2 mb2">
+        <a href="{{relative url}}" class="block button button-transparent button-narrow border border-light-gray px1 py1">
+            <img src="{{relative previews.0.urls.large}}" class="valign-middle lazyload" />
+            <div class="px1 pt1 center">
+                <span class="mt0 mb0 h6 header-font">{{title}}</span>
+            </div>
+        </a>
+    </div>
     {{~/each}}
-  </div>
-
-  <!--
+    <!--
     All photos and videos
   -->
-  <ul id="media" class="clearfix">
-    {{#each album.files~}}
-      {{> thumbnail}}
-    {{~/each}}
-  </ul>
-
-  <!--
-    Optional footer
-  -->
-  {{#if gallery.footer}}
-  <footer>
-    <p>{{{gallery.footer}}}</p>
-  </footer>
-  {{/if}}
-
-</div>
+    <ul id="media" class="clearfix mxn2 py1 photocenter">
+        {{#each album.files~}} {{> thumbnail}} {{~/each}}
+    </ul>
+</main>

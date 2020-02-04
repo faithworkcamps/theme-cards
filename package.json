@@ -1,16 +1,16 @@
 {
-  "name": "@thumbsup/theme-cards",
+  "name": "@faithworkcamps/theme-cards",
   "version": "1.2.0",
-  "description": "Thumbsup cards theme",
-  "author": "Thumbsup",
+  "description": "faithworkcamps cards theme",
+  "author": "faithworkcamps",
   "license": "MIT",
-  "homepage": "https://github.com/thumbsup/theme-cards#readme",
+  "homepage": "https://github.com/faithworkcamps/theme-cards#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thumbsup/theme-cards.git"
+    "url": "git+https://github.com/faithworkcamps/theme-cards.git"
   },
   "bugs": {
-    "url": "https://github.com/thumbsup/theme-cards/issues"
+    "url": "https://github.com/faithworkcamps/theme-cards/issues"
   },
   "thumbsup": {
     "themeRoot": "theme"
